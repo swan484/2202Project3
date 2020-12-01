@@ -106,7 +106,7 @@ for(let t of timePeriods){
         case "2019":
             let nineteen = {
                 time_Interval: "2019",
-                revenue: budgetAnalysis.getMonthlyRevenue("2019")
+                revenue: budgetAnalysis.getYearlyRevenue("2019")
             }
             objArray.push(nineteen);
             break;
