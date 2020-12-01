@@ -24,7 +24,7 @@ class BudgetAnalysis {
         __BudgetItems__.push(bItem)
     }
 
-    getMontlyBudgetItems(month, year){
+    getMonthlyBudgetItems(month, year){
         let monthlyBItems = [];
         let budgetItems = new BudgetItem;
         budgetItems = this.getBudgetItems();

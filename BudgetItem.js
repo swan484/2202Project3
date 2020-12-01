@@ -9,7 +9,7 @@ class BudgetItem{
         this.getAmount = function(){
             return __amount__;
         }
-        this.setMonth = function(height){
+        this.setMonth = function(month){
             __month__ = (month >=1 && month <=12) ? month : 1;
         }
         this.getMonth = function(){

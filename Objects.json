@@ -2,41 +2,41 @@
     {
         "type": "income",
         "amount": "2000",
-        "month": "May",
+        "month": "June",
         "year": "2019"
     }
 ,
     {
         "type": "expense",
-        "amount": "1000",
-        "month": "May",
+        "amount": "100",
+        "month": "June",
         "year": "2019"
     }
 ,
     {
         "type": "expense",
-        "amount": "1000",
-        "month": "May",
+        "amount": "100",
+        "month": "November",
         "year": "2019"
     }
 ,
     {
         "type": "income",
         "amount": "3000",
-        "month": "May",
+        "month": "November",
         "year": "2019"
     }
 ,
     {
         "type": "expense",
-        "amount": "1000",
-        "month": "May",
+        "amount": "100",
+        "month": "December",
         "year": "2019"
     }
 ,   
     {
         "type": "income",
-        "amount": "100",
+        "amount": "2000",
         "month": "January",
         "year": "2018"
     }
@@ -44,28 +44,28 @@
 ,
     {
         "type": "income",
-        "amount": "00",
+        "amount": "200",
         "month": "January",
         "year": "2018"
     }
 ,
     {
         "type": "expense",
-        "amount": "5000",
+        "amount": "100",
         "month": "February",
         "year": "2018"
     }
 ,
     {
         "type": "expense",
-        "amount": "5000",
+        "amount": "500",
         "month": "October",
         "year": "2018"
     }
 , 
     {
         "type": "expense",
-        "amount": "5000",
+        "amount": "700",
         "month": "October",
         "year": "2018"
     }
