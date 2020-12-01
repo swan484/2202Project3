@@ -4,6 +4,7 @@
 
 let BudgetAnalysis = require("./BudgetAnalysis");
 const BudgetItem = require("./BudgetItem");
+const fs = require("fs")
 let Objects = require("./Objects.json");
 
 let budgetAnalysis = new BudgetAnalysis(Objects);
