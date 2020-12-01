@@ -117,7 +117,7 @@ let objectsList = "["
 for(let obj of objArray){
     objectsList += JSON.stringify(obj) + ",";
 }
-let JSONObjects = string.substring(0, string.length - 1);
+let JSONObjects = objectsList.substring(0, objectsList.length - 1);
 JSONObjects += "]";
 
 var stream = fs.createWriteStream("output.json");
