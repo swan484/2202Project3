@@ -1,6 +1,4 @@
 let BudgetItem = require('./BudgetItem.js');
-const Expense = require('./Expense.js');
-const Income = require('./Income.js');
 
 class BudgetAnalysis { 
     constructor(bItems){
@@ -24,12 +22,12 @@ class BudgetAnalysis {
         __BudgetItems__.push(bItem)
     }
 
-    getMonthlyBudgetItems(month, year){
+    getMontlyBudgetItems(month){
         let monthlyBItems = [];
         let budgetItems = new BudgetItem;
         budgetItems = this.getBudgetItems();
         for(let i of budgetItems){
-            if(i.month == month && i.year ==year){
+            if(i.month == month){
                 monthlyBItems.push(i);
             }
         }
@@ -48,12 +46,12 @@ class BudgetAnalysis {
         return yearlyBItems;
     }
 
-    getMonthlyRevenue(month, year){
+    getMonthlyRevenue(month){
         let monthlyBudgetItems = [];
         let __net__ = 0;
         let budgetItems = this.getBudgetItems();
         for(let a of budgetItems) {
-            if(a.month === month && a.year == year) {
+            if(a.month === month) {
                 monthlyBudgetItems.push(a);
             }
         }
