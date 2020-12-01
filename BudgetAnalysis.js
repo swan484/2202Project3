@@ -24,12 +24,12 @@ class BudgetAnalysis {
         __BudgetItems__.push(bItem)
     }
 
-    getMontlyBudgetItems(month){
+    getMontlyBudgetItems(month, year){
         let monthlyBItems = [];
         let budgetItems = new BudgetItem;
         budgetItems = this.getBudgetItems();
         for(let i of budgetItems){
-            if(i.month == month){
+            if(i.month == month && i.year ==year){
                 monthlyBItems.push(i);
             }
         }
@@ -48,12 +48,12 @@ class BudgetAnalysis {
         return yearlyBItems;
     }
 
-    getMonthlyRevenue(month){
+    getMonthlyRevenue(month, year){
         let monthlyBudgetItems = [];
         let __net__ = 0;
         let budgetItems = this.getBudgetItems();
         for(let a of budgetItems) {
-            if(a.month === month) {
+            if(a.month === month && a.year == year) {
                 monthlyBudgetItems.push(a);
             }
         }

@@ -10,7 +10,7 @@
         "type": "expense",
         "amount": "1000",
         "month": "May",
-        "year": "2018"
+        "year": "2019"
     }
 ,
     {
@@ -36,8 +36,37 @@
 ,   
     {
         "type": "income",
+        "amount": "100",
+        "month": "January",
+        "year": "2018"
+    }
+
+,
+    {
+        "type": "income",
+        "amount": "00",
+        "month": "January",
+        "year": "2018"
+    }
+,
+    {
+        "type": "expense",
         "amount": "5000",
-        "month": "May",
+        "month": "February",
+        "year": "2018"
+    }
+,
+    {
+        "type": "expense",
+        "amount": "5000",
+        "month": "October",
+        "year": "2018"
+    }
+, 
+    {
+        "type": "expense",
+        "amount": "5000",
+        "month": "October",
         "year": "2018"
     }
 
