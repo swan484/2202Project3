@@ -23,3 +23,4 @@ console.log("\nBudget Items for the year " + year + ": ");
 for(let bItemYear of budgetAnalysis.getYearlyBudgetItems(year)){
     console.log(bItemYear);
 }
+
