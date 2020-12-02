@@ -30,8 +30,6 @@ class BudgetAnalysis {
 
         this.setBudgetItems(budgetItemData);
 
-        console.log("done constructing. size:")
-        console.log(__BudgetItems__);
     }
 
     add(bItem){
