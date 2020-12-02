@@ -9,15 +9,15 @@ class BudgetAnalysis {
         let bi;
 
         this.setBudgetItems = function(bdata){
-            for(let b of budgetItemData){
+            for(let b of bdata){
                 switch(b.type){
                     case undefined:
                         bi = new BudgetItem(b.amount, b.month, b.year);
                         break;
-                    case "Expense":
+                    case "expense":
                         bi = new Expense(b.amount, b.month, b.year, b.destination, b.spender)
                         break;
-                    case "Income":
+                    case "income":
                         bi = new Income(b.amount, b.month, b.year, b.source)
                         break;
                 }
@@ -28,7 +28,10 @@ class BudgetAnalysis {
             return __BudgetItems__;
         }
 
-        this.setBudgetItems(bItems);
+        this.setBudgetItems(budgetItemData);
+
+        console.log("done constructing. size:")
+        console.log(__BudgetItems__);
     }
 
     add(bItem){
@@ -39,7 +42,7 @@ class BudgetAnalysis {
         let monthlyBItems = [];
         let budgetItems = this.getBudgetItems();
         for(let i of budgetItems){
-            if(i.month == month){
+            if(i.getMonth() == month){
                 monthlyBItems.push(i);
             }
         }
@@ -50,7 +53,7 @@ class BudgetAnalysis {
         let yearlyBItems = [];
         let budgetItems = this.getBudgetItems();
         for(let j of budgetItems){
-            if(j.year == year){
+            if(j.getYear() == year){
                 yearlyBItems.push(j);
             }
         }
@@ -59,37 +62,32 @@ class BudgetAnalysis {
 
     getMonthlyRevenue(month){
         let monthlyBudgetItems = this.getMontlyBudgetItems(month);
-        let __net__ = 0;
+        let net = 0;
        
         for(let b of monthlyBudgetItems){
-            if(b.type === "expense"){
-                __net__ -= Number(b.amount);
+            if(b.constructor.name === "Expense"){
+                net -= Number(b.getAmount());
             }
-            else if(b.type === "income"){
-                __net__ += Number(b.amount);
+            else if(b.constructor.name === "Income"){
+                net += Number(b.getAmount());
             }
         }
-        return __net__;
+        return net;
     }
 
     getYearlyRevenue(year){
-        let yearlyBudgetItems = [];
-        let __net__ = 0;
-        let budgetItems = this.getBudgetItems();
-        for(let q of budgetItems) {
-            if(q.year === year) {
-                yearlyBudgetItems.push(q);
-            }
-        }
+        let yearlyBudgetItems = this.getYearlyBudgetItems(year)
+        let net = 0;
+      
         for(let z of yearlyBudgetItems){
-            if(z.type === "expense"){
-                __net__ -= Number(z.amount);
+            if(z.constructor.name === "Expense"){
+                net -= Number(z.getAmount());
             }
-            else if(z.type === "income"){
-                __net__ += Number(z.amount);
+            else if(z.constructor.name === "Income"){
+                net += Number(z.getAmount());
             }
         }
-        return __net__;
+        return net;
     }
 }
 

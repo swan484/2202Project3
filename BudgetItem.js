@@ -10,7 +10,7 @@ class BudgetItem{
             return __amount__;
         }
         this.setMonth = function(month){
-            __month__ = (month >=1 && month <=12) ? month : 1;
+            __month__ = month;
         }
         this.getMonth = function(){
             return __month__;
