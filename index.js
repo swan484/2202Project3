@@ -35,4 +35,5 @@ var stream = fs.createWriteStream("output.json");
 stream.once('open', function(fd){
     stream.write(JSONObjects);
     stream.end();
+    console.log("Writing Complete!");
 });
