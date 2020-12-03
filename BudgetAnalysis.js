@@ -10,6 +10,8 @@ class BudgetAnalysis {
 
         this.setBudgetItems = function(bdata){
             for(let b of bdata){
+                // For each JSON object that we fetch, we will check to see if it is Income or Expense
+                // Then we create a corresponding BudgetItem object and push into private array
                 switch(b.type){
                     case undefined:
                         bi = new BudgetItem(b.amount, b.month, b.year);
@@ -61,7 +63,8 @@ class BudgetAnalysis {
     getMonthlyRevenue(month){
         let monthlyBudgetItems = this.getMontlyBudgetItems(month);
         let net = 0;
-       
+        // since the objects in monthlyBudgetItems are either Expense of Income objects,
+        // we need to get their class name by using constructor.name property.
         for(let b of monthlyBudgetItems){
             if(b.constructor.name === "Expense"){
                 net -= Number(b.getAmount());
